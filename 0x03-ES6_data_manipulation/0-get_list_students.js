@@ -1,3 +1,8 @@
+
+/**
+ * Return an array of students
+ * @returns {Array} Array of students
+ */
 function getListStudents() {
   return [
     { id: 1, firstName: "Guillaume", location: "San Francisco" },
