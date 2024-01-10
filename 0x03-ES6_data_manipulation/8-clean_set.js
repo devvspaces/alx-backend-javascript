@@ -3,7 +3,7 @@
  * @returns {Array} Array of student ids
  */
 function cleanSet(set, startstring) {
-  if (startstring.length === 0) {
+  if (!startstring) {
     return ''
   }
   return Array.from(set)
