@@ -7,7 +7,7 @@ function updateStudentGradeByCity(students, city, newGrades) {
     const grade = newGrades.filter(obj => obj.studentId == student.id)[0];
     return {
       ...student,
-      grade: grade || "N/A"
+      grade: grade ? grade.grade : 'N/A'
     }
   })
   return result
