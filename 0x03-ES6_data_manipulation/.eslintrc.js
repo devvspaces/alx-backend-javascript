@@ -27,6 +27,7 @@ module.exports = {
       'LabeledStatement',
       'WithStatement',
     ],
+    'quotes': ['error', 'double'],
   },
   overrides:[
     {
