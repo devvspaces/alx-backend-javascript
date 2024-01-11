@@ -7,7 +7,7 @@ function cleanSet(set, startString) {
     return '';
   }
   return Array.from(set)
-    .filter((str) => str.startsWith(startString))
+    .filter((str) => typeof(str) === 'string' && str.startsWith(startString))
     .map((str) => str.substring(startString.length))
     .join('-');
 }
