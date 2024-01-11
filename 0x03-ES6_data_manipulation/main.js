@@ -1,4 +1,8 @@
-import cleanSet from "./8-clean_set";
+import updateUniqueItems from "./10-update_uniq_items";
+import groceriesList from "./9-groceries_list";
 
-console.log(cleanSet(new Set(['bonjovi', 'bonaparte', 'bonappetit', 'banana']), 'bon'));
-console.log(cleanSet(new Set(['bonjovi', 'bonaparte', 'bonappetit', 'banana']), 'dsds'));
+const map = groceriesList();
+console.log(map);
+
+updateUniqueItems(map);
+console.log(map);

@@ -7,14 +7,14 @@ function cleanSet(set, startString) {
     !set
     || !startString
     || !(set instanceof Set)
-    || typeof startString !== 'string'
+    || typeof startString !== "string"
   ) {
-    return '';
+    return "";
   }
   return Array.from(set)
-    .filter((str) => typeof str === 'string' && str.startsWith(startString))
+    .filter((str) => typeof str === "string" && str.startsWith(startString))
     .map((str) => str.substring(startString.length))
-    .join('-');
+    .join("-");
 }
 
 export default cleanSet;
