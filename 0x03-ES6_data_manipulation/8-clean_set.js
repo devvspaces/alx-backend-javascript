@@ -3,8 +3,8 @@
  * @returns {Array} Array of student ids
  */
 function cleanSet(set, startstring) {
-  if (!startstring) {
-    return ''
+  if (!set || !startString || !(set instanceof Set) || typeof startString !== 'string') {
+    return '';
   }
   return Array.from(set)
     .filter((str) => str.startsWith(startstring))
