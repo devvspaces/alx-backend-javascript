@@ -1,4 +1,4 @@
-interface ITeacher {
+interface Teacher {
   readonly firstName: string;
   readonly lastName: string;
   fullTimeEmployee: boolean;
@@ -7,7 +7,7 @@ interface ITeacher {
   [key: string]: any;
 }
 
-const teacher3: ITeacher = {
+const teacher3: Teacher = {
   firstName: 'John',
   fullTimeEmployee: false,
   lastName: 'Doe',
@@ -18,7 +18,7 @@ const teacher3: ITeacher = {
 console.log(teacher3);
 
 
-interface Directors extends ITeacher {
+interface Directors extends Teacher {
   numberOfReports: number;
 }
 
