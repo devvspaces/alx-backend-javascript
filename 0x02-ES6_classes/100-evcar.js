@@ -8,10 +8,6 @@ export default class EVCar extends Car {
 
   cloneCar() {
     const newCar = new Car();
-    const keys = Object.keys(newCar);
-    for (const key of keys) {
-      newCar[key] = newCar[key];
-    }
     return newCar;
   }
-} 
+}
