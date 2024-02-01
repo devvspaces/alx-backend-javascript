@@ -11,7 +11,7 @@ export default function handleProfileSignup(firstName, lastName, fileName) {
     const photoStatus = photo.status;
     const userStatus = user.status;
     if (photoStatus === 'rejected') {
-      photo.value = photo.reason;
+      photo.value = `Error: ${photo.reason.message}`;
       delete photo.reason;
     }
     if (userStatus === 'rejected') {
