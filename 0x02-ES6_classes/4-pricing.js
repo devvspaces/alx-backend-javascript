@@ -1,10 +1,9 @@
-import Currency from "./3-currency";
+import Currency from './3-currency';
 
 export default class Pricing {
   constructor(amount, currency) {
-    if (typeof amount !== "number") throw TypeError("Amount must be a number");
-    if (!(currency instanceof Currency))
-      throw TypeError("Currency must be a Currency");
+    if (typeof amount !== 'number') throw TypeError('Amount must be a number');
+    if (!(currency instanceof Currency)) throw TypeError('Currency must be a Currency');
     this._amount = amount;
     this._currency = currency;
   }
@@ -18,14 +17,12 @@ export default class Pricing {
   }
 
   set amount(newAmount) {
-    if (typeof newAmount !== "number")
-      throw TypeError("Amount must be a number");
+    if (typeof newAmount !== 'number') throw TypeError('Amount must be a number');
     this._amount = newAmount;
   }
 
   set currency(newCurrency) {
-    if (!(newCurrency instanceof Currency))
-      throw TypeError("Currency must be a Currency");
+    if (!(newCurrency instanceof Currency)) throw TypeError('Currency must be a Currency');
     this._currency = newCurrency;
   }
 
@@ -34,9 +31,8 @@ export default class Pricing {
   }
 
   static convertPrice(amount, conversionRate) {
-    if (typeof amount !== "number") throw TypeError("Amount must be a number");
-    if (typeof conversionRate !== "number")
-      throw TypeError("ConversionRate must be a number");
+    if (typeof amount !== 'number') throw TypeError('Amount must be a number');
+    if (typeof conversionRate !== 'number') throw TypeError('ConversionRate must be a number');
     return amount * conversionRate;
   }
 }
