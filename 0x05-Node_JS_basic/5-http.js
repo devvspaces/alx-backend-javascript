@@ -64,7 +64,6 @@ const countStudents = (filePath) => new Promise((resolve, reject) => {
   }
 });
 
-
 /**
  * Create a more complex HTTP server using Node's HTTP module
  */
@@ -72,10 +71,11 @@ const SERVER_ROUTE_HANDLERS = [
   {
     route: '/',
     handler(_, res) {
+      const responseText = 'Hello Holberton School!';
       res.setHeader('Content-Length', responseText.length);
       res.setHeader('Content-Type', 'text/plain');
       res.statusCode = 200;
-      res.write(Buffer.from('Hello Holberton School!'));
+      res.write(Buffer.from(responseText));
     },
   },
   {
@@ -105,7 +105,7 @@ const SERVER_ROUTE_HANDLERS = [
 ];
 
 app.on('request', (req, res) => {
-  for (let i = 0; i < SERVER_ROUTE_HANDLERS.length; i++) {
+  for (let i = 0; i < SERVER_ROUTE_HANDLERS.length; i+=1) {
     const routeHandler = SERVER_ROUTE_HANDLERS[i];
     if (routeHandler.route === req.url) {
       routeHandler.handler(req, res);
