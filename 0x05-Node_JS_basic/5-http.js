@@ -105,7 +105,7 @@ const SERVER_ROUTE_HANDLERS = [
 ];
 
 app.on('request', (req, res) => {
-  for (let i = 0; i < SERVER_ROUTE_HANDLERS.length; i+=1) {
+  for (let i = 0; i < SERVER_ROUTE_HANDLERS.length; i += 1) {
     const routeHandler = SERVER_ROUTE_HANDLERS[i];
     if (routeHandler.route === req.url) {
       routeHandler.handler(req, res);
