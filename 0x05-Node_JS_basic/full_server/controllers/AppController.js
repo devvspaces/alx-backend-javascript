@@ -3,10 +3,9 @@
  * @author Ayanwola Ayomide <https://github.com/devvspaces>
  */
 class AppController {
-
   /**
    * Get Homepage
-   * @param {*} _ 
+   * @param {*} _
    * @param {*} response The response object.
    */
   static getHomepage(_, response) {
